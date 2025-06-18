@@ -176,6 +176,25 @@ db.books.aggregate([
 ])
 
 // Implement a pipeline that groups books by publication decade and counts them
+db.books.aggregate([
+  {
+    $project: {
+      decade: {
+        $concat: [
+          { $toString: { $subtract: ["$published_year", { $mod: ["$published_year", 10] }] } },
+          "s"
+        ]
+      }
+    }
+  },
+  {
+    $group: {
+      _id: "$decade",
+      count: { $sum: 1 }
+    }
+  },
+  { $sort: { _id: 1 } }
+])
 
 // Create an index on the `title` field for faster searches
 // Create a compound index on `author` and `published_year`
