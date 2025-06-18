@@ -134,6 +134,10 @@ db.books.find(
 )
 
 // Use projection to return only the title, author, and price fields in your queries
+db.books.find(
+  { genre: "Fiction" },
+  { title: 1, author: 1, price: 1, _id: 0 }
+)
 
 // Implement sorting to display books by price (both ascending and descending)
 // Use the `limit` and `skip` methods to implement pagination (5 books per page)
