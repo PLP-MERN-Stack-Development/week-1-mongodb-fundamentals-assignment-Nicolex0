@@ -45,3 +45,40 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 - [MongoDB Documentation](https://docs.mongodb.com/)
 - [MongoDB University](https://university.mongodb.com/)
 - [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
+
+## 🛠️ Setup Instructions
+
+### 1. Clone the Repository
+# 📚 PLP MongoDB Week 1 Assignment – Bookstore
+
+This project demonstrates the use of MongoDB for basic and advanced data manipulation and analysis through a fictional bookstore database.
+
+## 🚀 Objective
+
+- Learn MongoDB fundamentals: installation, data insertion, CRUD, advanced queries, aggregation, indexing.
+- Work with a sample dataset of books in a collection named `books` within the database `plp_bookstore`.
+
+---
+
+## 🛠️ Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/week-1-mongodb-fundamentals-assignment-Nicolex0.git
+cd week-1-mongodb-fundamentals-assignment-Nicolex0
+```
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Start MongoDB
+```bash
+mongod
+```
+
+### 4. Run data insertion script
+```bash
+node insert_books.js
+```
