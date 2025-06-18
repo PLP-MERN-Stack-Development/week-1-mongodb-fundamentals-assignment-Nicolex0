@@ -141,6 +141,16 @@ db.books.find(
 
 // Implement sorting to display books by price (both ascending and descending)
 db.books.find().sort({ price: 1 })
+db.books.find().sort({ price: -1 })
+
 
 // Use the `limit` and `skip` methods to implement pagination (5 books per page)
+db.books.find().skip(0).limit(5)
+db.books.find().skip(5).limit(5)
+db.books.find().skip(10).limit(5)
+db.books.find({}, { title: 1, price: 1, _id: 0 })
+  .sort({ price: 1 })
+  .skip(5)
+  .limit(5)
+
 
