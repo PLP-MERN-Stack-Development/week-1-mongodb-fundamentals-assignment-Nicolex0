@@ -164,6 +164,17 @@ db.books.aggregate([
 ])
 
 // Create an aggregation pipeline to find the author with the most books in the collection
+db.books.aggregate([
+  {
+    $group: {
+      _id: "$author",
+      bookCount: { $sum: 1 }
+    }
+  },
+  { $sort: { bookCount: -1 } },
+  { $limit: 1 }
+])
+
 // Implement a pipeline that groups books by publication decade and counts them
 
 // Create an index on the `title` field for faster searches
