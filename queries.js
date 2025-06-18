@@ -126,3 +126,5 @@ db.books.updateOne(
 )
 
 // Delete a book by its title
+db.books.deleteOne({ title: "Moby Dick" })
+
