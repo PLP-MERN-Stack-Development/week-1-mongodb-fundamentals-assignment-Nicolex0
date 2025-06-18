@@ -197,6 +197,8 @@ db.books.aggregate([
 ])
 
 // Create an index on the `title` field for faster searches
+db.books.createIndex({ title: 1 })
+
 // Create a compound index on `author` and `published_year`
 // Use the `explain()` method to demonstrate the performance improvement with your indexes
 
