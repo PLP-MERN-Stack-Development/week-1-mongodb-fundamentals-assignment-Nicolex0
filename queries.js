@@ -109,3 +109,11 @@ db.books.insertMany([
     publisher: "HarperOne"
   }
 ])
+
+// Find all books in a specific genre
+db.books.find({ genre: "Fiction" })
+
+// Find books published after a certain year
+// Find books by a specific author
+// Update the price of a specific books
+// Delete a book by its title
