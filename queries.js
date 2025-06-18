@@ -120,4 +120,9 @@ db.books.find({ published_year: { $gt: 1950 } })
 db.books.find({ author: "George Orwell" })
 
 // Update the price of a specific books
+db.books.updateOne(
+  { title: "The Hobbit" },
+  { $set: { price: 16.99 } }
+)
+
 // Delete a book by its title
