@@ -153,4 +153,21 @@ db.books.find({}, { title: 1, price: 1, _id: 0 })
   .skip(5)
   .limit(5)
 
+// Create an aggregation pipeline to calculate the average price of books by genre
+db.books.aggregate([
+  {
+    $group: {
+      _id: "$genre",
+      averagePrice: { $avg: "$price" }
+    }
+  }
+])
+
+// Create an aggregation pipeline to find the author with the most books in the collection
+// Implement a pipeline that groups books by publication decade and counts them
+
+// Create an index on the `title` field for faster searches
+// Create a compound index on `author` and `published_year`
+// Use the `explain()` method to demonstrate the performance improvement with your indexes
+
 
