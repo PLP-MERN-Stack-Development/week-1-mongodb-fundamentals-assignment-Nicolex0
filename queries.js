@@ -117,5 +117,7 @@ db.books.find({ genre: "Fiction" })
 db.books.find({ published_year: { $gt: 1950 } })
 
 // Find books by a specific author
+db.books.find({ author: "George Orwell" })
+
 // Update the price of a specific books
 // Delete a book by its title
