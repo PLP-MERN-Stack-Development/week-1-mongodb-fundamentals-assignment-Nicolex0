@@ -114,6 +114,8 @@ db.books.insertMany([
 db.books.find({ genre: "Fiction" })
 
 // Find books published after a certain year
+db.books.find({ published_year: { $gt: 1950 } })
+
 // Find books by a specific author
 // Update the price of a specific books
 // Delete a book by its title
